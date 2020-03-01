@@ -1,0 +1,8 @@
+[package]
+name = "simple_timesheet_parser"
+version = "0.1.0"
+authors = ["Simon Struck <simon@simonscode.org>"]
+edition = "2018"
+
+[dependencies]
+chrono = "0.4.10"
