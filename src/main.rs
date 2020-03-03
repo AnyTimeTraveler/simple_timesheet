@@ -32,18 +32,9 @@ fn parse_times(file: String) {
         let date_string: Vec<&str> = line.split(" ").collect();
 
         let date = NaiveDateTime::new(
-            NaiveDate::from_ymd(
-                date_string[6].parse().unwrap(),
-                match date_string[3] {
-                    "Jan" => 1,
-                    "Feb" => 2,
-                    "Mär" => 3,
-                    "Apr" => 4,
-                    "Mai" => 5,
-                    _ => 0,
-                },
-                date_string[2][0..date_string[2].find('.').unwrap()].parse().unwrap(),
-            ), NaiveTime::parse_from_str(date_string[4], "%H:%M:%S").unwrap());
+            NaiveDate::parse_from_str(date_string[1], "%Y-%m-%d").unwrap(),
+            NaiveTime::parse_from_str(&date_string[2][..date_string[2].find('+').unwrap()], "%H:%M:%S").unwrap()
+        );
 
         if line.starts_with("Enter") {
             start = date;
