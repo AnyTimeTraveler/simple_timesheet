@@ -1,6 +1,6 @@
 [package]
 name = "simple_timesheet_parser"
-version = "0.1.0"
+version = "1.0.0"
 authors = ["Simon Struck <simon@simonscode.org>"]
 edition = "2018"
 
