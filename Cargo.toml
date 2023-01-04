@@ -2,7 +2,7 @@
 name = "simple_timesheet"
 version = "1.0.0"
 authors = ["Simon Struck <simon@simonscode.org>"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
-chrono = "0.4.11"
+chrono = "0.4.23"

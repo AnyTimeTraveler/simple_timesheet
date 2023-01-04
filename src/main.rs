@@ -17,7 +17,7 @@ fn main() {
         let lines: Vec<&str> = text.split('\n').collect();
         let mut months: Vec<String> = Vec::new();
 
-        let mut start = NaiveDateTime::new(NaiveDate::from_ymd(2000, 01, 01), NaiveTime::from_hms(0, 0, 0));
+        let mut start = NaiveDateTime::new(NaiveDate::from_ymd_opt(2000, 01, 01).unwrap(), NaiveTime::from_hms_opt(0, 0, 0).unwrap());
 
         let mut day = (start.date(), Duration::zero());
         let mut month = (start.date(), Duration::zero());
